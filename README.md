@@ -39,7 +39,7 @@ npm install macoolka-string
 # Documentation
 
 - [Docs](https://macoolka.github.io/macoolka-string)
-- [API Reference](https://macoolka.github.io/macoolka-string/docs/modules)
+- [API Reference](https://macoolka.github.io/macoolka-string/docs/Modules)
 - [API Reference (中文)](https://macoolka.github.io/macoolka-string/docs/模块)
 
 
