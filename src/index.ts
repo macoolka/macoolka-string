@@ -414,7 +414,7 @@ export const unCamelCase = (delimiter: string = ' ') => (str: string): string =>
  * @since 0.2.0
  */
 export const slugify = (delimeter: string = '-') => (str: string): string =>
-  lowerCase(trim()(removeNonWord(replaceAccents(str))).replace(/ +/g, delimeter))
+  lowerCase(trim()(str).replace(/ +/g, delimeter))
 
 /**
  * Limit number of chars.
@@ -457,8 +457,7 @@ export const truncate = (maxChars: number, append: string = '...', onlyFullWords
  */
 
 export const hyphenate = (split: string = '-') => (str: string) => {
-  return lowerCase(trim()(removeNonWord(replaceAccents(str))).replace(UPPER_CASE, split + '$1'))
-
+  return str.replace(UPPER_CASE, split + '$1').toLowerCase();
 }
 /**
  * split camelCase text to array
