@@ -8,7 +8,7 @@ import {
    quoteString,removeNonASCII,removeNonWord,
    escapeHtml,unescapeHtml,escapeRegExp,
    escapeUnicode,unescapeUnicode,
-   replaceAccents,plural,unhyphenate
+   replaceAccents,plural,unhyphenate,toUpperFirstLetter
 } from '../';
 describe('string', () => {
   it('replaceAccents', () => {
@@ -119,5 +119,9 @@ describe('string', () => {
   it('escapeUnicode', () => {
     expect(unescapeUnicode('\\u6211\\u4eec')).toEqual('我们');
   });
-  truncate
+  it('toUpperFirstLetter', () => {
+    expect(toUpperFirstLetter('firstColorHover')).toEqual('FirstColorHover');
+    expect(toUpperFirstLetter('')).toEqual('');
+  });
+ 
 });

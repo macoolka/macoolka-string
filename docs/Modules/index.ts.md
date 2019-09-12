@@ -30,6 +30,7 @@ Common string function collection
 - [replaceAccents (function)](#replaceaccents-function)
 - [rtrim (function)](#rtrim-function)
 - [slugify (function)](#slugify-function)
+- [toUpperFirstLetter (function)](#toupperfirstletter-function)
 - [trim (function)](#trim-function)
 - [truncate (function)](#truncate-function)
 - [unCamelCase (function)](#uncamelcase-function)
@@ -418,6 +419,27 @@ export const slugify = (delimeter: string = '-') => (str: string): string => ...
 import { slugify } from 'macoolka-string'
 expect(slugify('_')('first Color Hover')).toEqual('first_color_hover')
 expect(slugify(' ')('first Color Hover')).toEqual('first color hover')
+```
+
+Added in v0.2.0
+
+# toUpperFirstLetter (function)
+
+First lettter to upper
+
+**Signature**
+
+```ts
+
+export const toUpperFirstLetter=(a:string)=>a.length>0?`${a.substring(0,1).toUpperCase()}${a.substring(1)}`:a => ...
+
+```
+
+**Example**
+
+```ts
+import { toUpperFirstLetter } from 'macoolka-string'
+expect(toUpperFirstLetter('firstColorHover')).toEqual('FirstColorHover')
 ```
 
 Added in v0.2.0

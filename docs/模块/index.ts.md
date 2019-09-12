@@ -30,6 +30,7 @@ parent: 模块
 - [replaceAccents (函数)](#replaceaccents-%E5%87%BD%E6%95%B0)
 - [rtrim (函数)](#rtrim-%E5%87%BD%E6%95%B0)
 - [slugify (函数)](#slugify-%E5%87%BD%E6%95%B0)
+- [toUpperFirstLetter (函数)](#toupperfirstletter-%E5%87%BD%E6%95%B0)
 - [trim (函数)](#trim-%E5%87%BD%E6%95%B0)
 - [truncate (函数)](#truncate-%E5%87%BD%E6%95%B0)
 - [unCamelCase (函数)](#uncamelcase-%E5%87%BD%E6%95%B0)
@@ -415,6 +416,27 @@ export const slugify = (delimeter: string = '-') => (str: string): string => ...
 import { slugify } from 'macoolka-string'
 expect(slugify('_')('first Color Hover')).toEqual('first_color_hover')
 expect(slugify(' ')('first Color Hover')).toEqual('first color hover')
+```
+
+v0.2.0 中添加
+
+# toUpperFirstLetter (函数)
+
+首字母大写
+
+**签名**
+
+```ts
+
+export const toUpperFirstLetter=(a:string)=>a.length>0?`${a.substring(0,1).toUpperCase()}${a.substring(1)}`:a => ...
+
+```
+
+**示例**
+
+```ts
+import { toUpperFirstLetter } from 'macoolka-string'
+expect(toUpperFirstLetter('firstColorHover')).toEqual('FirstColorHover')
 ```
 
 v0.2.0 中添加

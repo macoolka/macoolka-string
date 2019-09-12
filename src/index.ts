@@ -472,3 +472,14 @@ export const hyphenate = (split: string = '-') => (str: string) => {
 export const camelCaseToArray = (str: string): Array<string> => {
   return hyphenate()(str).split('-')
 }
+/**
+ * First lettter to upper
+ * @desczh
+ * 首字母大写
+ * @example
+ * import { toUpperFirstLetter } from 'macoolka-string'
+ * expect(toUpperFirstLetter('firstColorHover')).toEqual('FirstColorHover');
+ *
+ * @since 0.2.0
+ */
+export const toUpperFirstLetter=(a:string)=>a.length>0?`${a.substring(0,1).toUpperCase()}${a.substring(1)}`:a
